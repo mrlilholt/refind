@@ -62,12 +62,12 @@ const Map = ({ center = { lat: 37.7749, lng: -122.4194 }, zoom = 12, markers = [
     if (!window.google) {
       const script = document.createElement("script");
       // Replace YOUR_API_KEY with your actual key.
-      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAa4DqwVZy4hFDbrkqsx0e3u6kLYj1ZXd8&libraries=places`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}&libraries=places`;
       script.async = true;
       script.defer = true;
       script.onload = initializeMap;
       document.head.appendChild(script);
-    } else {
+    } else { 
       initializeMap();
     }
   }, [center, zoom, markers, directions]);
@@ -78,7 +78,7 @@ const Map = ({ center = { lat: 37.7749, lng: -122.4194 }, zoom = 12, markers = [
 const MapWrapper = (props) => {
   return (
     <LoadScript
-      googleMapsApiKey="AIzaSyAa4DqwVZy4hFDbrkqsx0e3u6kLYj1ZXd8"
+      googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
       libraries={["places", "directions"]}
     >
       <Map {...props} />
