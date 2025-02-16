@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+.login-button {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: white;
+    color: #4285F4;
+    border: 2px solid #4285F4;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Quicksand', sans-serif;
+    transition: background 0.3s;
+    outline: none;
+}
+
+.login-button:hover {
+    background: #f0f8ff;
+}
