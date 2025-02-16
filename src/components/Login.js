@@ -27,6 +27,7 @@ const Login = () => {
     fontFamily: "'Quicksand', sans-serif",
   };
 
+  // eslint-disable-next-line no-unused-vars
   const buttonStyle = {
     display: "flex",
     alignItems: "center",
